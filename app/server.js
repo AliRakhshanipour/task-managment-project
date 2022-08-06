@@ -14,7 +14,7 @@ module.exports = class Application {
   configApplication() {
     const path = require("path");
     this.#app.use(this.#express.json());
-    this.#app.use(this.#express.urlencoded({}));
+    this.#app.use(this.#express.urlencoded({ extended: true }));
     this.#app.use(this.#express.static(path.join(__dirname, "..", "public")));
   }
   //method for creating server with http package
