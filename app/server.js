@@ -7,8 +7,8 @@ module.exports = class Application {
   constructor(PORT, DB_URL) {
     this.configDatabase(DB_URL);
     this.configApplication();
-    this.createServer(PORT);
     this.createRoute();
+    this.createServer(PORT);
     this.errorHandler();
   }
 
@@ -70,6 +70,16 @@ module.exports = class Application {
         message: "this is a new express application :)",
       });
     });
+
+    // we use this middleware for error handling to be easier!!
+    //in every route we should do tryCatch ,
+    // but this middleware will handle that , we don't need to do try in every route!'
     this.#app.use(AllRoutes);
+    // this.#app.use((error, req, res, next) => {
+    //   try {
+    //   } catch (error) {
+    //     next(error);
+    //   }
+    // });
   }
 };
