@@ -1,3 +1,4 @@
+const { compareSync } = require("bcrypt");
 const UserModel = require("../../models/user.model");
 const { hashString } = require("../../modules/functions");
 
@@ -17,7 +18,25 @@ class AuthController {
       next(error);
     }
   }
-  login() {}
+  async login(req, res, next) {
+    try {
+      const { username, password } = req.body;
+      const user = await UserModel.findOne({ username });
+      if (!user)
+        throw { status: 401, message: "username or password is wrong!!" };
+      const check_password = compareSync(password, user.password);
+      if (!check_password)
+        throw { status: 401, message: "username or password is wrong!!" };
+      return res.status(200).json({
+        status: 200,
+        success: true,
+        message: `${user.username} , welcome to your account :)`,
+        token: "",
+      });
+    } catch (error) {
+      next(error);
+    }
+  }
   resetPassword() {}
 }
 

@@ -41,4 +41,21 @@ const registerValidator = () => {
   ];
 };
 
-module.exports = registerValidator;
+const loginValidator = () => {
+  return [
+    body("username")
+      .notEmpty()
+      .withMessage("username cannot be empty!")
+      .custom((username) => {
+        const usernameRegex = /^[a-z]+[a-z0-9\_\.]{2,}/gi;
+        if (usernameRegex.test(username)) {
+          return true;
+        }
+        throw "username is wrong!!";
+      }),
+    body("password")
+      .isLength({ min: 6, max: 20 })
+      .withMessage("password must be between 6 and 20 characters"),
+  ];
+};
+module.exports = { registerValidator, loginValidator };
