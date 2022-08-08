@@ -12,4 +12,11 @@ const tokenGenerator = (payload) => {
   });
   return token;
 };
-module.exports = { hashString, tokenGenerator };
+
+const jwtTokenVerification = (token) => {
+  const result = jwt.verify(token, process.env.SECRET_KEY_SHA1);
+  if (!result?.username)
+    throw { status: 401, message: "please login to your account!!" };
+  return result;
+};
+module.exports = { hashString, tokenGenerator, jwtTokenVerification };
