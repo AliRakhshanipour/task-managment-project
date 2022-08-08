@@ -12,6 +12,7 @@ const UserSchema = new Schema(
     roles: { type: String, default: "USER" },
     skills: { type: Array, default: [] },
     teams: { type: [Types.ObjectId], default: [] },
+    token: { type: String, default: "" },
   },
   {
     timestamps: true,
