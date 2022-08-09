@@ -13,6 +13,7 @@ const UserSchema = new Schema(
     skills: { type: Array, default: [] },
     teams: { type: [Types.ObjectId], default: [] },
     token: { type: String, default: "" },
+    profile_image: { type: String, default: "" },
   },
   {
     timestamps: true,
