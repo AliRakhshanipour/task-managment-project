@@ -20,6 +20,13 @@ router.post(
   ProjectController.createProject
 );
 
+router.get(
+  "/project-list",
+  checkUserLoggedIn,
+  expressValidatorMapper,
+  ProjectController.getProjects
+);
+
 module.exports = {
   projectRoutes: router,
 };

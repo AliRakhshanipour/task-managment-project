@@ -4,6 +4,13 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsa
 Content-Type: application/json
 
 {
-    "title":"express project",
-    "text": "express project for a task manager and features are : upload image , create user, create team"
+    "title":"express project2",
+    "text": "express project for a task manager and features are : upload image , create user, create team",
+    "tags": ["pp","ww","rr"]
 }
+
+
+###get projects
+GET   http://localhost:3000/project/project-list HTTP/1.1
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsaTE5OTczMTMiLCJpYXQiOjE2NjAzNjkxMDEsImV4cCI6MTY2MjA5NzEwMX0.qrjJQNldP_XXH27UONPLz8k48jKpQzafOnXLEx1NE-8
+Content-Type: application/json
