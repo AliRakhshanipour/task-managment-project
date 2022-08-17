@@ -4,7 +4,6 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNhc
 
 ###edit user profile
 POST  http://localhost:3000/user/profile HTTP/1.1
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNhcmFhd3d3c2thcmkiLCJpYXQiOjE2NTk5ODUyNjQsImV4cCI6MTY2MTcxMzI2NH0.J6Cwtaiue_xQepJdeg_0Hm2WfoPG4_X0wiwpIBGRoak
 Content-Type: application/json
 
 {

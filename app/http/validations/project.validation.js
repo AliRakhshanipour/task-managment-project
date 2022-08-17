@@ -6,8 +6,6 @@ const createProjectValidator = () => {
       .notEmpty()
       .isLength({ min: 20 })
       .withMessage("project text atLeast 20 characters"),
-
-    body("tags").isArray({ min: 0, max: 10 }).withMessage("at most 10 tags!!"),
   ];
 };
 

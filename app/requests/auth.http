@@ -3,11 +3,11 @@ POST  http://localhost:3000/auth/register HTTP/1.1
 Content-Type: application/json
 
 {
-    "username": "ali1997313",
-    "email": "ali.rakhshanipour.sru@gmail.com",
-    "phone": "09120397539",
-    "password": "ali121212",
-    "password_confirmation":"ali121212"
+    "username": "ali1376111",
+    "email": "ali.killer.sru@gmail.com",
+    "phone": "09212323234",
+    "password": "ali.rakhshanipour",
+    "password_confirmation":"ali.rakhshanipour"
 }
 
 ###login request
@@ -16,6 +16,6 @@ Content-Type: application/json
 Authorization: Bearer {{$dotenv SECRET_KEY_SHA1}}
 
 {
-    "username": "ali1997313",
-    "password": "ali121212"
+    "username": "ali1376111",
+    "password": "ali.rakhshanipour"
 }

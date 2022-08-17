@@ -8,7 +8,7 @@ const ProjectSchema = new Schema(
     tags: { type: [String], default: [] },
     owner: { type: Types.ObjectId, required: true },
     team: { type: Types.ObjectId },
-    private: { type: Boolean, default: true },
+    Private: { type: Boolean, default: true },
   },
   {
     timestamps: true,

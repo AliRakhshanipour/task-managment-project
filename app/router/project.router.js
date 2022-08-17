@@ -8,15 +8,14 @@ const {
 } = require("../http/validations/project.validation");
 const { uploadFile } = require("../modules/express-fileupload");
 const fileupload = require("express-fileupload");
+const { mongoIdValidator } = require("../http/validations/public");
 
 const router = require("express").Router();
 router.post(
   "/create",
-  fileupload(),
   createProjectValidator(),
   expressValidatorMapper,
   checkUserLoggedIn,
-  uploadFile,
   ProjectController.createProject
 );
 
@@ -25,6 +24,30 @@ router.get(
   checkUserLoggedIn,
   expressValidatorMapper,
   ProjectController.getProjects
+);
+
+router.get(
+  "/:id",
+  checkUserLoggedIn,
+  mongoIdValidator(),
+  expressValidatorMapper,
+  ProjectController.getProjectById
+);
+
+router.delete(
+  "/:id",
+  checkUserLoggedIn,
+  mongoIdValidator(),
+  expressValidatorMapper,
+  ProjectController.removeProject
+);
+
+router.post(
+  "/:id",
+  checkUserLoggedIn,
+  mongoIdValidator(),
+  expressValidatorMapper,
+  ProjectController.updateProject
 );
 
 module.exports = {
