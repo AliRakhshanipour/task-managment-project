@@ -1,0 +1,59 @@
+###create team
+POST  http://localhost:3000/team/create/62fd6a0a4d6769d7bac2c9d1 HTTP/1.1
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imhvc2VpbiBha2JhcmkiLCJpYXQiOjE2NjA3NzQ5NDUsImV4cCI6MTY2MjUwMjk0NX0.a1I_CknvRPEAjnPHGWwApJzJ7x931Lanwevk8IjOrYY
+Content-Type: application/json
+
+{
+    "name":"taylor swift",
+    "description": "tsg",
+    "username":"taylor_TSG2"
+}
+
+
+###get teams
+GET   http://localhost:3000/team/team-list HTTP/1.1
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsaTEzNzYxMTEiLCJpYXQiOjE2NjA2ODcxMjcsImV4cCI6MTY2MjQxNTEyN30.bEEJnyNSfyLt2NER6ja3E6R8mZkGqar9Zeneeu_k-8c
+Content-Type: application/json
+
+
+###get team by id
+GET   http://localhost:3000/team/62fe0b1119af54d1e6951450 HTTP/1.1
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imhvc2VpbiBha2JhcmkiLCJpYXQiOjE2NjA3NzQ5NDUsImV4cCI6MTY2MjUwMjk0NX0.a1I_CknvRPEAjnPHGWwApJzJ7x931Lanwevk8IjOrYY
+Content-Type: application/json
+
+
+###remove team by id
+DELETE   http://localhost:3000/team/62fd6a7d4d6769d7bac2c9db HTTP/1.1
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imhvc2VpbiBha2JhcmkiLCJpYXQiOjE2NjA3NzQ5NDUsImV4cCI6MTY2MjUwMjk0NX0.a1I_CknvRPEAjnPHGWwApJzJ7x931Lanwevk8IjOrYY
+Content-Type: application/json
+
+
+###update team by id
+PUT   http://localhost:3000/team/62fe0b1119af54d1e6951450 HTTP/1.1
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imhvc2VpbiBha2JhcmkiLCJpYXQiOjE2NjA3NzQ5NDUsImV4cCI6MTY2MjUwMjk0NX0.a1I_CknvRPEAjnPHGWwApJzJ7x931Lanwevk8IjOrYY
+Content-Type: application/json
+
+{
+    "name": "taylor swift",
+    "description": "tsg",
+    "username":"taylor_TSG"
+}
+
+
+###remove project by id
+DELETE   http://localhost:3000/project/62fcdd9401e26a679ecbca60 HTTP/1.1
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsaTEzNzYxMTEiLCJpYXQiOjE2NjA2ODcxMjcsImV4cCI6MTY2MjQxNTEyN30.bEEJnyNSfyLt2NER6ja3E6R8mZkGqar9Zeneeu_k-8c
+Content-Type: application/json
+
+
+###edit project
+POST  http://localhost:3000/project/62fcde0378d9dd56a0037d65 HTTP/1.1
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsaTEzNzYxMTEiLCJpYXQiOjE2NjA2ODcxMjcsImV4cCI6MTY2MjQxNTEyN30.bEEJnyNSfyLt2NER6ja3E6R8mZkGqar9Zeneeu_k-8c
+Content-Type: application/json
+
+{
+    "title":"task manager3",
+    "text": "express project for a task manager and features are : upload image , create user, create team1",
+    "tags":["task manager33","express33","nodejs33"],
+    "Private":true
+}

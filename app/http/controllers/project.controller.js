@@ -79,10 +79,17 @@ class ProjectController {
       const owner = req.user._id;
       const projectId = req.params.id;
       const { title, text, tags, Private } = req.body;
+
       const project = await ProjectModel.findOne({ owner, _id: projectId });
       if (!project) throw { status: 404, message: "project not found" };
       const result = await project.updateOne({ title, text, tags, Private });
-      console.log(result);
+      if (result.modifiedCount == 0)
+        throw { status: 404, message: "project update failed!" };
+      return res.status(200).json({
+        status: 200,
+        success: true,
+        message: "project update successfully done!!",
+      });
     } catch (error) {
       next(error);
     }

@@ -58,6 +58,10 @@ class UserController {
       next(error);
     }
   }
+  async getUsers(req, res, next) {
+    const users = await UserModel.find({});
+    return res.status(200).json({ status: 200, success: true, users });
+  }
   addSkills() {}
   editSkills() {}
   acceptInvitation() {}

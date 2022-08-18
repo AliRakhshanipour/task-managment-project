@@ -20,6 +20,7 @@ router.post(
   checkUserLoggedIn,
   UserController.addProfileImage
 );
+router.get("/user-list", checkUserLoggedIn, UserController.getUsers);
 
 module.exports = {
   userRoutes: router,

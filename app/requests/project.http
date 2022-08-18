@@ -18,24 +18,24 @@ Content-Type: application/json
 
 
 ###get project by id
-GET   http://localhost:3000/project/62fc168743c4dada4c9a72fb HTTP/1.1
+GET   http://localhost:3000/project/62fcde0378d9dd56a0037d65 HTTP/1.1
 authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsaTEzNzYxMTEiLCJpYXQiOjE2NjA2ODcxMjcsImV4cCI6MTY2MjQxNTEyN30.bEEJnyNSfyLt2NER6ja3E6R8mZkGqar9Zeneeu_k-8c
 Content-Type: application/json
 
 ###remove project by id
-DELETE   http://localhost:3000/project/62fc168743c4dada4c9a72fb HTTP/1.1
+DELETE   http://localhost:3000/project/62fcdd9401e26a679ecbca60 HTTP/1.1
 authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsaTEzNzYxMTEiLCJpYXQiOjE2NjA2ODcxMjcsImV4cCI6MTY2MjQxNTEyN30.bEEJnyNSfyLt2NER6ja3E6R8mZkGqar9Zeneeu_k-8c
 Content-Type: application/json
 
 
 ###edit project
-POST  http://localhost:3000/project/62fc168743c4dada4c9a72fb HTTP/1.1
+POST  http://localhost:3000/project/62fcde0378d9dd56a0037d65 HTTP/1.1
 authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsaTEzNzYxMTEiLCJpYXQiOjE2NjA2ODcxMjcsImV4cCI6MTY2MjQxNTEyN30.bEEJnyNSfyLt2NER6ja3E6R8mZkGqar9Zeneeu_k-8c
 Content-Type: application/json
 
 {
-    "title":"task manager1",
+    "title":"task manager3",
     "text": "express project for a task manager and features are : upload image , create user, create team1",
-    "tags":["task manager1","express1","nodejs1"],
-    "Private":false
+    "tags":["task manager33","express33","nodejs33"],
+    "Private":true
 }
